@@ -8,7 +8,9 @@ import MentorsSection from "@/components/MentorsSection";
 import TargetAudienceSection from "@/components/TargetAudienceSection";
 import SocialProofSection from "@/components/SocialProofSection";
 import MarketStatsSection from "@/components/MarketStatsSection";
+import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
+import FixedFooterCTA from "@/components/FixedFooterCTA";
 
 const Index = () => {
   return (
@@ -22,7 +24,11 @@ const Index = () => {
       <TargetAudienceSection />
       <SocialProofSection />
       <MarketStatsSection />
+      <FAQSection />
       <Footer />
+      <FixedFooterCTA />
+      {/* Add bottom padding to prevent content from being hidden behind fixed footer */}
+      <div className="h-20"></div>
     </div>
   );
 };

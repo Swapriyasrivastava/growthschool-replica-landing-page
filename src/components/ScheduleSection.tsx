@@ -43,28 +43,39 @@ const ScheduleSection = () => {
           and tools to build and scale your D2C brand with AI
         </p>
         
-        {/* Timeline dots */}
+        {/* Timeline dots with animation */}
         <div className="flex justify-center mb-8">
           <div className="flex space-x-2">
             {[...Array(7)].map((_, i) => (
-              <div key={i} className={`w-3 h-3 rounded-full ${i === 0 ? 'bg-orange-500' : 'bg-gray-600'}`}></div>
+              <div 
+                key={i} 
+                className={`w-3 h-3 rounded-full transition-all duration-500 ${
+                  i === 0 ? 'bg-orange-500 animate-pulse' : 'bg-gray-600'
+                }`}
+                style={{
+                  animationDelay: `${i * 0.2}s`
+                }}
+              ></div>
             ))}
           </div>
         </div>
         
         <div className="max-w-6xl mx-auto">
           <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-gray-700"></div>
+            {/* Animated timeline line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-gradient-to-b from-orange-500 via-gray-700 to-gray-700"></div>
             
             {schedule.map((item, index) => (
               <div key={index} className={`relative flex items-center mb-16 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                {/* Timeline circle */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-orange-500 rounded-full border-4 border-black z-10"></div>
+                {/* Animated timeline circle */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-orange-400 to-pink-500 rounded-full border-4 border-black z-10 animate-pulse shadow-lg shadow-orange-500/50"></div>
+                
+                {/* Moving circle animation */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-orange-400 rounded-full z-20 animate-ping"></div>
                 
                 {/* Content card */}
                 <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
-                  <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
+                  <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:bg-gray-800/70 transition-all duration-300 transform hover:scale-105">
                     <div className="bg-gradient-to-r from-orange-400 to-pink-500 text-white px-4 py-2 rounded-lg text-sm font-medium mb-4 inline-block">
                       {item.date}
                     </div>
