@@ -1,7 +1,7 @@
 
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import BenefitsSection from "@/components/BenefitsSection";
+import MastermindOutcomes from "@/components/MastermindOutcomes";
 import ScheduleSection from "@/components/ScheduleSection";
 import AIToolsSection from "@/components/AIToolsSection";
 import MentorsSection from "@/components/MentorsSection";
@@ -17,7 +17,7 @@ const Index = () => {
     <div className="min-h-screen bg-black">
       <Header />
       <HeroSection />
-      <BenefitsSection />
+      <MastermindOutcomes />
       <ScheduleSection />
       <AIToolsSection />
       <MentorsSection />
