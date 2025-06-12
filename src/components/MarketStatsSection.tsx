@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const MarketStatsSection = () => {
   return (
-    <section className="py-20 bg-black">
+    <section className="py-20">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
           D2C Market is only GROWING with AI Integration 🚀

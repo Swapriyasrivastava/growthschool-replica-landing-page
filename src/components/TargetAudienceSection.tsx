@@ -20,7 +20,7 @@ const TargetAudienceSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-black relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="absolute top-1/4 left-0 w-96 h-2 bg-gradient-to-r from-transparent via-orange-500/30 to-transparent"></div>
